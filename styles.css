@@ -1,0 +1,84 @@
+body{
+    margin: 40px;
+}
+
+/* Styles padrão */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.resumo, 
+.grafico, 
+.comparativo {
+    display: grid;
+    gap: 15px;
+}
+
+.grid-template-rows-1 {
+    gap: 35px;
+}
+
+.item {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.subitem {
+    display: grid;
+    background: green;
+    text-align: center;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Styles mobile */
+.grid-template-rows-1 {
+    grid-template-rows: 350px 750px 750px;
+}
+
+.resumo {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grafico {
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.comparativo {
+    /* grid-template-columns: 1fr; */
+}
+
+/* Styles media */
+
+@media(min-width: 580px) {
+    .grid-template-rows-1 {
+        grid-template-rows: 200px 700px 750px;
+    }       
+    .resumo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grafico {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .comparativo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(min-width:940px) {
+    .grid-template-rows-1 {
+        grid-template-rows: 100px 350px 400px;
+    }      
+    .resumo {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .grafico {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .comparativo {
+        grid-template-columns: 1fr;
+    }
+}
